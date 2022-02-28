@@ -3,6 +3,7 @@
 #include <sstream>
 #include <string>
 #include <vector>
+#include <stack>
 #include "XMLParse.h"
 
 namespace KRNHAN003{
@@ -31,6 +32,7 @@ namespace KRNHAN003{
 	  	std::string tagText = "";
 	  	std::string tempText = "";
 	  	int tagNum = 0;
+		std::stack<TagStruct> stack; // created a stack for mastery
 		for(int i = 0; i< d.size(); i++){ // loops through every line in the vector
     		for(char& c : d[i]) { // loops through each character in line
 
