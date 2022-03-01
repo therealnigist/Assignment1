@@ -95,6 +95,7 @@ namespace KRNHAN003{
 		    	if ((c == '>') && (status == "tag")){
 			        status = "nottag";
 			        tempText = "";
+					//maybe pusback tag here
 			        continue;
 		      	}
 
@@ -106,6 +107,12 @@ namespace KRNHAN003{
 
 		      	if ((c == '<') && (status == "nottag")){
 			        tempText += "<";
+			        status = "tag";
+			        continue;
+		      	}
+
+				if ((c == '>') && (status == "nottag")){
+			        tempText += ">";
 			        status = "tag";
 			        continue;
 		      	}
@@ -125,6 +132,7 @@ namespace KRNHAN003{
 		      
 		      	if((c!= '>') && (status == "tag")){ // all other characters when tag
 		        	tagName += c;
+
 		      	}
 		      
 		      	if ((c!= '>') && (status == "nottag")){ // all other characters when nottag
