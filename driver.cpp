@@ -3,7 +3,7 @@
 #include <sstream>
 #include <string>
 #include <vector>
-#include "XMLParse.h"
+#include "XMLParse2.h"
 
 int main(int argc, char const *argv[]){
 
