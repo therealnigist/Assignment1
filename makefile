@@ -1,4 +1,4 @@
-driver.exe: XMLParse2.o driver2.o
+driver.exe: XMLParse2.o driver.o
 	g++ XMLParse2.o driver.o -o driver.exe -std=c++03
 
 XMLParse.o: XMLParse2.cpp
