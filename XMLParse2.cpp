@@ -53,7 +53,7 @@ namespace KRNHAN003{
 			       		else{
 			       			bool repeat = false; //shows that a tag has been repeated
 			       			for(int j = 0; j < tagList.size(); j++){ // goes through taglist
-			       				if(tagList[j].ID == tagName){
+			       				if(tagList[j].ID == stack.top().ID){
 			       					repeat = true;
 			       					tagList[j].numTags++;
 			       					tagList[j].text += ":";
